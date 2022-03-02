@@ -1,0 +1,50 @@
+> cat probB03.bwp
+5 10 7
+>>>>>>>>>>
+DEHIJ
+G
+B
+AC
+F
+>>>>>>>>>>
+DEHIJF
+GB
+C
+A
+
+>>>>>>>>>>
+
+> ./blocksworld probB03.bwp
+iter=1, depth=pathcost=0, heuristic=3, score=3 children=20, Qsize=1
+iter=2, depth=pathcost=1, heuristic=2, score=3 children=16, Qsize=20
+iter=3, depth=pathcost=2, heuristic=1, score=3 children=12, Qsize=31
+success! iter=4, depth=pathcost=3, max_Qsize=37
+>>>>>>>>>>
+Move 0, pathcost=0, heuristic=3, f(n)=g(n)+h(n)=3
+DEHIJ
+G
+B
+AC
+F
+>>>>>>>>>>
+Move 1, pathcost=1, heuristic=2, f(n)=g(n)+h(n)=3
+DEHIJF
+G
+B
+AC
+
+>>>>>>>>>>
+Move 2, pathcost=2, heuristic=1, f(n)=g(n)+h(n)=3
+DEHIJF
+GB
+
+AC
+
+>>>>>>>>>>
+Move 3, pathcost=3, heuristic=0, f(n)=g(n)+h(n)=3
+DEHIJF
+GB
+C
+A
+>>>>>>>>>>
+statistics: probs/probB03.bwp method Astar planlen 3 iter 4 maxq 37

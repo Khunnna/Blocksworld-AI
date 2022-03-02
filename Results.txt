@@ -1,0 +1,132 @@
+Heuristic Description:
+The best heuristic check if the stack state is less than the goalstate 
+of that stack. If the stack is smaller, it will add the difference between
+the goalstate stack and current state of the stack. Then the heuristic will
+check for blocks that don't match, and when the blocks don't match
+the heuristic will be changed by the difference of the current 
+state of the stack toptal and the number of blocks avoce the current block.
+Laslty, this heuristic also checks if the block under every block is correct,
+and if not correct, it will add 1 for every inccorect block that is under
+another block. 
+
+TABLE AT THE VERY BOTTOM
+
+Hueristic Example 1:
+
+iter=1, depth=pathcost=0, heuristic=3, score=3 children=6, Qsize=1
+iter=2, depth=pathcost=1, heuristic=2, score=3 children=4, Qsize=6
+iter=3, depth=pathcost=2, heuristic=1, score=3 children=6, Qsize=7
+success! iter=4, depth=pathcost=3, max_Qsize=10
+>>>>>>>>>>
+Move 0, pathcost=0, heuristic=3, f(n)=g(n)+h(n)=3
+CE
+AD
+B
+>>>>>>>>>>
+Move 1, pathcost=1, heuristic=2, f(n)=g(n)+h(n)=3
+CE
+ADB
+
+>>>>>>>>>>
+Move 2, pathcost=2, heuristic=1, f(n)=g(n)+h(n)=3
+C
+ADB
+E
+>>>>>>>>>>
+Move 3, pathcost=3, heuristic=0, f(n)=g(n)+h(n)=3
+
+ADBC
+E
+>>>>>>>>>>
+statistics: probs/probA03.bwp method Astar planlen 3 iter 4 maxq 10
+
+Hueristic Example 2:
+
+iter=1, depth=pathcost=0, heuristic=4, score=4 children=20, Qsize=1
+iter=2, depth=pathcost=1, heuristic=3, score=4 children=20, Qsize=20
+iter=3, depth=pathcost=2, heuristic=2, score=4 children=20, Qsize=35
+iter=4, depth=pathcost=3, heuristic=1, score=4 children=16, Qsize=50
+success! iter=5, depth=pathcost=4, max_Qsize=61
+>>>>>>>>>>
+Move 0, pathcost=0, heuristic=4, f(n)=g(n)+h(n)=4
+AEG
+C
+FJ
+BDI
+H
+>>>>>>>>>>
+Move 1, pathcost=1, heuristic=3, f(n)=g(n)+h(n)=4
+AEG
+CJ
+F
+BDI
+H
+>>>>>>>>>>
+Move 2, pathcost=2, heuristic=2, f(n)=g(n)+h(n)=4
+AE
+CJ
+FG
+BDI
+H
+>>>>>>>>>>
+Move 3, pathcost=3, heuristic=1, f(n)=g(n)+h(n)=4
+AE
+CJ
+FGH
+BDI
+
+>>>>>>>>>>
+Move 4, pathcost=4, heuristic=0, f(n)=g(n)+h(n)=4
+AEI
+CJ
+FGH
+BD
+
+>>>>>>>>>>
+statistics: probs/probB04.bwp method Astar planlen 4 iter 5 maxq 61
+
+statistics: probs/probA03.bwp method Astar planlen 3 iter 4 maxq 10
+statistics: probs/probA04.bwp method Astar planlen 4 iter 5 maxq 9
+statistics: probs/probA05.bwp method Astar planlen 5 iter 6 maxq 14
+statistics: probs/probA06.bwp method Astar planlen 6 iter 15 maxq 30
+statistics: probs/probA07.bwp method Astar planlen 7 iter 11 maxq 18
+statistics: probs/probA08.bwp method Astar planlen 10 iter 40 maxq 52
+statistics: probs/probA09.bwp method Astar planlen 9 iter 18 maxq 45
+statistics: probs/probA10.bwp method Astar planlen 10 iter 103 maxq 128
+statistics: probs/probA11.bwp method Astar planlen 12 iter 44 maxq 98
+statistics: probs/probB03.bwp method Astar planlen 3 iter 4 maxq 37
+statistics: probs/probB04.bwp method Astar planlen 4 iter 5 maxq 61
+statistics: probs/probB05.bwp method Astar planlen 5 iter 6 maxq 71
+statistics: probs/probB06.bwp method Astar planlen 6 iter 7 maxq 70
+statistics: probs/probB07.bwp method Astar planlen 7 iter 12 maxq 131
+statistics: probs/probB08.bwp method Astar planlen 8 iter 9 maxq 112
+statistics: probs/probB09.bwp method Astar planlen 8 iter 10 maxq 112
+statistics: probs/probB10.bwp method Astar planlen 11 iter 44 maxq 569
+statistics: probs/probB11.bwp method Astar planlen 11 iter 128 maxq 1441
+statistics: probs/probB12.bwp method Astar planlen 10 iter 14 maxq 172
+statistics: probs/probB13.bwp method Astar planlen 14 iter 6974 maxq 41154
+statistics: probs/probB14.bwp method Astar planlen 15 iter 4432 maxq 29812
+statistics: probs/probB15.bwp method Astar planlen 15 iter 635 maxq 5556
+statistics: probs/probB16.bwp method Astar planlen 17 iter 78 maxq 1072
+statistics: probs/probB17.bwp method Astar planlen 16 iter 1655 maxq 18327
+statistics: probs/probB18.bwp method Astar planlen 13 iter 20 maxq 229
+statistics: probs/probB19.bwp method Astar planlen 14 iter 1633 maxq 9215
+statistics: probs/probB20.bwp method Astar planlen 18 iter 351 maxq 2918
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

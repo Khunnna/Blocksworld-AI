@@ -1,0 +1,91 @@
+> cat probB08.bwp
+5 10 15
+>>>>>>>>>>
+ADF
+BJ
+G
+
+CEHI
+>>>>>>>>>>
+ADFJEG
+
+HI
+
+CB
+>>>>>>>>>>
+
+> ./blocksworld probB08.bwp
+iter=1, depth=pathcost=0, heuristic=8, score=8 children=16, Qsize=1
+iter=2, depth=pathcost=1, heuristic=7, score=8 children=20, Qsize=16
+iter=3, depth=pathcost=2, heuristic=6, score=8 children=20, Qsize=31
+iter=4, depth=pathcost=3, heuristic=5, score=8 children=20, Qsize=46
+iter=5, depth=pathcost=4, heuristic=4, score=8 children=20, Qsize=60
+iter=6, depth=pathcost=5, heuristic=3, score=8 children=16, Qsize=75
+iter=7, depth=pathcost=6, heuristic=2, score=8 children=20, Qsize=86
+iter=8, depth=pathcost=7, heuristic=1, score=8 children=16, Qsize=101
+success! iter=9, depth=pathcost=8, max_Qsize=112
+>>>>>>>>>>
+Move 0, pathcost=0, heuristic=8, f(n)=g(n)+h(n)=8
+ADF
+BJ
+G
+
+CEHI
+>>>>>>>>>>
+Move 1, pathcost=1, heuristic=7, f(n)=g(n)+h(n)=8
+ADF
+BJ
+G
+I
+CEH
+>>>>>>>>>>
+Move 2, pathcost=2, heuristic=6, f(n)=g(n)+h(n)=8
+ADF
+BJ
+G
+IH
+CE
+>>>>>>>>>>
+Move 3, pathcost=3, heuristic=5, f(n)=g(n)+h(n)=8
+ADFJ
+B
+G
+IH
+CE
+>>>>>>>>>>
+Move 4, pathcost=4, heuristic=4, f(n)=g(n)+h(n)=8
+ADFJE
+B
+G
+IH
+C
+>>>>>>>>>>
+Move 5, pathcost=5, heuristic=3, f(n)=g(n)+h(n)=8
+ADFJEG
+B
+
+IH
+C
+>>>>>>>>>>
+Move 6, pathcost=6, heuristic=2, f(n)=g(n)+h(n)=8
+ADFJEG
+B
+H
+I
+C
+>>>>>>>>>>
+Move 7, pathcost=7, heuristic=1, f(n)=g(n)+h(n)=8
+ADFJEG
+B
+HI
+
+C
+>>>>>>>>>>
+Move 8, pathcost=8, heuristic=0, f(n)=g(n)+h(n)=8
+ADFJEG
+
+HI
+
+CB
+>>>>>>>>>>
+statistics: probs/probB08.bwp method Astar planlen 8 iter 9 maxq 112

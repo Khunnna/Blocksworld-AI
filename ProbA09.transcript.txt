@@ -1,0 +1,83 @@
+> cat probA09.bwp
+3 5 500
+>>>>>>>>>>
+AE
+CD
+B
+>>>>>>>>>>
+EA
+BD
+C
+>>>>>>>>>>
+
+> ./blocksworld probA09.bwp
+iter=1, depth=pathcost=0, heuristic=8, score=8 children=6, Qsize=1
+iter=2, depth=pathcost=1, heuristic=7, score=8 children=6, Qsize=6
+iter=3, depth=pathcost=1, heuristic=7, score=8 children=6, Qsize=9
+iter=4, depth=pathcost=2, heuristic=7, score=9 children=6, Qsize=12
+iter=5, depth=pathcost=1, heuristic=8, score=9 children=6, Qsize=15
+iter=6, depth=pathcost=2, heuristic=7, score=9 children=6, Qsize=18
+iter=7, depth=pathcost=2, heuristic=8, score=10 children=6, Qsize=21
+iter=8, depth=pathcost=2, heuristic=8, score=10 children=4, Qsize=24
+iter=9, depth=pathcost=1, heuristic=9, score=10 children=6, Qsize=25
+iter=10, depth=pathcost=2, heuristic=8, score=10 children=6, Qsize=28
+iter=11, depth=pathcost=2, heuristic=8, score=10 children=4, Qsize=30
+iter=12, depth=pathcost=3, heuristic=6, score=9 children=6, Qsize=31
+iter=13, depth=pathcost=4, heuristic=4, score=8 children=6, Qsize=34
+iter=14, depth=pathcost=5, heuristic=3, score=8 children=6, Qsize=37
+iter=15, depth=pathcost=6, heuristic=3, score=9 children=4, Qsize=40
+iter=16, depth=pathcost=7, heuristic=2, score=9 children=4, Qsize=41
+iter=17, depth=pathcost=8, heuristic=1, score=9 children=6, Qsize=42
+success! iter=18, depth=pathcost=9, max_Qsize=45
+>>>>>>>>>>
+Move 0, pathcost=0, heuristic=8, f(n)=g(n)+h(n)=8
+AE
+CD
+B
+>>>>>>>>>>
+Move 1, pathcost=1, heuristic=7, f(n)=g(n)+h(n)=8
+A
+CDE
+B
+>>>>>>>>>>
+Move 2, pathcost=2, heuristic=8, f(n)=g(n)+h(n)=10
+
+CDE
+BA
+>>>>>>>>>>
+Move 3, pathcost=3, heuristic=6, f(n)=g(n)+h(n)=9
+E
+CD
+BA
+>>>>>>>>>>
+Move 4, pathcost=4, heuristic=4, f(n)=g(n)+h(n)=8
+EA
+CD
+B
+>>>>>>>>>>
+Move 5, pathcost=5, heuristic=3, f(n)=g(n)+h(n)=8
+EAD
+C
+B
+>>>>>>>>>>
+Move 6, pathcost=6, heuristic=3, f(n)=g(n)+h(n)=9
+EADB
+C
+
+>>>>>>>>>>
+Move 7, pathcost=7, heuristic=2, f(n)=g(n)+h(n)=9
+EADB
+
+C
+>>>>>>>>>>
+Move 8, pathcost=8, heuristic=1, f(n)=g(n)+h(n)=9
+EAD
+B
+C
+>>>>>>>>>>
+Move 9, pathcost=9, heuristic=0, f(n)=g(n)+h(n)=9
+EA
+BD
+C
+>>>>>>>>>>
+statistics: probs/probA09.bwp method Astar planlen 9 iter 18 maxq 45
